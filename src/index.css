@@ -1,0 +1,83 @@
+:root {
+  --bg: #f7f9fb;
+  --card: #fff;
+  --accent: #2b8cf4;
+  --muted: #777;
+}
+
+body {
+  font-family: Inter, system-ui, Arial;
+  background: var(--bg);
+  margin: 0;
+  padding: 24px;
+}
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+}
+h1 {
+  margin: 0 0 16px;
+  color: #0b2b4a;
+}
+
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.todo-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.todo-form button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.todo-item {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.todo-item .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.todo-item .text {
+  flex: 1;
+}
+.todo-item.completed .text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.actions button {
+  margin-left: 8px;
+  background: none;
+  border: 1px solid #eee;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.empty {
+  color: var(--muted);
+  padding: 12px;
+}
